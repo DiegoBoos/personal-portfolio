@@ -1,11 +1,73 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro"
+import Badge from "../components/Badge.astro"
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import GitHubIcon from "../components/icons/GitHub.astro"
+import MailIcon from "../components/icons/Mail.astro"
+import Briefcase from "../components/icons/Briefcase.astro"
+import CodeIcon from "../components/icons/Code.astro"
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Porfolio de Diego Boos"
+  description="Contrata a Diego Boos para tu próximo proyecto"
+>
+  <main class="px-4">
+    <section class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="/images/diegoboos.jpg"
+        alt="diegoboos photo"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hola, soy Diego
+        <a
+          href="https://linkedin.com/in/diegoboos"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Open to work</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-balance max-w-[700px]">
+        <span>+4 years of experience.</span><span class="text-yellow-200">
+          Full Stack Software Developer at SIRIS S.A.S | Ex. AI Researcher</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <a href="https://linkedin.com/in/diegobolanososejo" target="_blank" rel="noopener">
+          <LinkedInIcon class="size-4 md:size-6" />
+           LinkedIn
+        </a>
+        <a href="https://github.com/DiegoBoos" target="_blank" rel="noopener">
+          <GitHubIcon class="size-4 md:size-6" />
+           GitHub
+        </a>
+        <a href="mailto:diego-boos@hotmail.com" target="_blank" rel="noopener">
+          <MailIcon class="size-4 md:size-6" />
+          diego-boos@hotmail.com
+        </a>
+      </nav>
+    </SectionContainer>
+
+    <!-- <section id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+         Experiencia laboral
+      </h2>
+      <Experience />
+    </section> -->
+
+   <!--  <section id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+         Proyectos
+      </h2>
+      <Projects />
+    </section> -->
+  </main>
 </Layout>
