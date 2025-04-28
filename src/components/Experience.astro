@@ -1,0 +1,28 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "2021 – Present",
+    title: "Mobile Developer",
+    company: "SIRIS S.A.S",
+    description: "I design, develop, and deploy end-to-end mobile applications using Flutter, Android and iOS backed by Firebase and Supabase. I have successfully led projects such as a Point of Sales (POS) Mobile Application using native mobile capabilities to streamline retail operations, a Car Concessionaire Management System to optimize vehicle inventory, and a Digital Health Form Application to enhance patient data collection in the healthcare sector. Additionally, As an AI Researcher I have worked on fine-tuning and optimizing large language models like Llama 3, GPT-3.5, and Deepseek-R1, creating custom chatbots capable of generating targeted content.",
+    link: "https://siris.com.co",
+  },
+  {
+    date: "May 2024 – August 2024",
+    title: "AI Researcher — Virtual and Augmented Reality Lab",
+    company: "VARLab",
+    description: "At VARLab, I conducted research evaluating Microsoft Copilot Studio as a potential acquisition, comparing it against a custom-built open-source Gen-AI stack. I developed a standalone AI solution leveraging Ollama for open-source models, FastAPI for the backend, Angular for the frontend, Supabase as a vector database, and Docker for local deployment. I also designed and implemented a FAQs-based chatbot using Microsoft Copilot, integrating publicly available Conestoga College resources to deliver accurate, conversational responses and enhance the user experience in accessing research information.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

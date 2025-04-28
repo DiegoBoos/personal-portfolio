@@ -1,73 +1,52 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Badge from "../components/Badge.astro"
-import LinkedInIcon from "../components/icons/LinkedIn.astro"
-import GitHubIcon from "../components/icons/GitHub.astro"
-import MailIcon from "../components/icons/Mail.astro"
-import Briefcase from "../components/icons/Briefcase.astro"
-import CodeIcon from "../components/icons/Code.astro"
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+import TitleSection from "@/components/TitleSection.astro"
 ---
 
 <Layout
-  title="Porfolio de Diego Boos"
-  description="Contrata a Diego Boos para tu próximo proyecto"
->
-  <main class="px-4">
-    <section class="py-44 pb-32">
-      <img
-        class="rounded-full size-12 mb-4"
-        src="/images/diegoboos.jpg"
-        alt="diegoboos photo"
-      />
-      <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-      >
-        Hola, soy Diego
-        <a
-          href="https://linkedin.com/in/diegoboos"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Open to work</Badge>
-        </a>
-      </h1>
-      <h2 class="text-xl lg:text-2xl text-balance max-w-[700px]">
-        <span>+4 years of experience.</span><span class="text-yellow-200">
-          Full Stack Software Developer at SIRIS S.A.S | Ex. AI Researcher</span
-        >
-      </h2>
+  title="Diego's Portfolio - Mobile Developer with more than 4+ years of experience"
+  description="">
+</Layout>
 
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <a href="https://linkedin.com/in/diegobolanososejo" target="_blank" rel="noopener">
-          <LinkedInIcon class="size-4 md:size-6" />
-           LinkedIn
-        </a>
-        <a href="https://github.com/DiegoBoos" target="_blank" rel="noopener">
-          <GitHubIcon class="size-4 md:size-6" />
-           GitHub
-        </a>
-        <a href="mailto:diego-boos@hotmail.com" target="_blank" rel="noopener">
-          <MailIcon class="size-4 md:size-6" />
-          diego-boos@hotmail.com
-        </a>
-      </nav>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experience">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experience
+      </TitleSection>
+      <Experience />
     </SectionContainer>
 
-    <!-- <section id="experiencia">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <Briefcase class="size-7" />
-         Experiencia laboral
-      </h2>
-      <Experience />
-    </section> -->
-
-   <!--  <section id="proyectos">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+    <SectionContainer id="projects">
+      <TitleSection>
         <CodeIcon class="size-7" />
-         Proyectos
-      </h2>
+        Projects
+      </TitleSection>
       <Projects />
-    </section> -->
+    </SectionContainer>
+
+    <SectionContainer id="about-me">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        About me
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
   </main>
 </Layout>
