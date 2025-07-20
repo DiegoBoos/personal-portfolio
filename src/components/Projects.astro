@@ -7,6 +7,9 @@ import SQLite from "./icons/SQLite.astro"
 import NodeJS from "./icons/NodeJS.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import React from "./icons/React.astro"
+import Redux from "./icons/Redux.astro"
+import JavaScript from "./icons/JavaScript.astro"
 
 const TAGS = {
   PYTHON: {
@@ -34,11 +37,57 @@ const TAGS = {
     class: "bg-black text-white",
     icon: NodeJS,
   },
- 
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
+   REDUX: {
+    name: "Redux",
+    class: "bg-black text-white",
+    icon: Redux,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: JavaScript,
+  }
 }
 
 const PROJECTS = [
   {
+    title: "ADMIN SIEM",
+    description: "React/Redux Content Management System (CMS) for a private health organization to facilitate non-technical users to manage and publish web content, reduced developer workload and improved publishing efficiency.",
+    github: "https://github.com/DiegoBoos/ADMIN-SIEM",
+    image: "/src/assets/projects/admin-siem.png",
+    link: "",
+    tags: [TAGS.REACT, TAGS.REDUX, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "SIRIS POS",
+    description: "Mobile POS system designed and developed using Flutter with real-time geolocation tracking, Firebase integration, and Bluetooth printing to support mobile retail operations.",
+    github: "https://github.com/DiegoBoos/SirisPos",
+    image: "/src/assets/projects/sirispos.png",
+    link: "",
+    tags: [TAGS.FLUTTER, TAGS.FIREBASE],
+  },
+  {
+    title: "IFASORIS",
+    description: "Offline-first mobile app for healthcare professionals using custom sync logic and Flutter Isolates for multithreaded processing.",
+    github: "https://github.com/DiegoBoos/SirisPos",
+    image: "/src/assets/projects/sirispos.png",
+    link: "",
+    tags: [TAGS.FLUTTER, TAGS.SQLITE],
+  },
+  {
+    title: "Course GPT",
+    description: "Designed and implemented the frontend using Angular to deliver an intuitive interface for a generative AI educational assistant, integrated the UI with a NestJS backend and Qdrant vector database, enabling seamless interaction with Ollama-powered language models improving the usability of academic search tools in real time.",
+    github: "https://github.com/DiegoBoos/SirisPos",
+    image: "/src/assets/projects/sirispos.png",
+    link: "",
+    tags: [TAGS.FLUTTER, TAGS.SQLITE],
+  },
+  /* {
     title: "TikTok Influencer Segmentation",
     description: "Segmented TikTok influencers using unsupervised learning to uncover hidden audience patterns. Cleaned and preprocessed data, applied K-means clustering, and built visual reports to help marketers target the right influencers with smarter, data-driven strategies.",
     github: "https://github.com/DiegoBoos/TitkTok-Influencer-Segmentation",
@@ -59,7 +108,7 @@ const PROJECTS = [
     github: "https://github.com/DiegoBoos/Sentiment-Analysis-on-Social-Media-Posts",
     image: "/src/assets/projects/sentiment-analysis.png",
     tags: [TAGS.PYTHON],
-  }
+  } */
 ]
 
 ---
