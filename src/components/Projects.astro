@@ -1,165 +1,136 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import Python from "./icons/Python.astro"
-import Firebase from "./icons/Firebase.astro"
-import Flutter from "./icons/Flutter.astro"
-import SQLite from "./icons/SQLite.astro"
-import NodeJS from "./icons/NodeJS.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
-import React from "./icons/React.astro"
-import Redux from "./icons/Redux.astro"
-import JavaScript from "./icons/JavaScript.astro"
+import Python from "./icons/Python.astro";
+import Firebase from "./icons/Firebase.astro";
+import Flutter from "./icons/Flutter.astro";
+import NodeJS from "./icons/NodeJS.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
   PYTHON: {
     name: "Python",
-    class: "bg-black text-white",
+    class: "bg-blue-100 text-blue-800",
     icon: Python,
   },
   FIREBASE: {
     name: "Firebase",
-    class: "bg-black text-white",
+    class: "bg-yellow-100 text-yellow-800",
     icon: Firebase,
   },
   FLUTTER: {
     name: "Flutter",
-    class: "bg-black text-white",
+    class: "bg-cyan-100 text-cyan-800",
     icon: Flutter,
   },
-  SQLITE: {
-    name: "SQLite",
-    class: "bg-black text-white",
-    icon: SQLite,
+  IA: {
+    name: "Inteligencia Artificial",
+    class: "bg-purple-100 text-purple-800",
+    icon: Python, // Reuse Python icon for AI generically or imported AI icon
   },
-  NODEJS: {
-    name: "NodeJS",
-    class: "bg-black text-white",
+  CLOUD: {
+    name: "Cloud",
+    class: "bg-sky-100 text-sky-800",
+    icon: Firebase, // Reuse Firebase/Cloud icon
+  },
+  BOT: {
+    name: "Automatización",
+    class: "bg-green-100 text-green-800",
     icon: NodeJS,
   },
-  REACT: {
-    name: "React",
-    class: "bg-black text-white",
-    icon: React,
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-green-100 text-green-800",
+    icon: NodeJS,
   },
-   REDUX: {
-    name: "Redux",
-    class: "bg-black text-white",
-    icon: Redux,
+  SAAS: {
+    name: "SaaS",
+    class: "bg-indigo-100 text-indigo-800",
+    icon: Firebase, // Reuse Firebase/Cloud icon for SaaS
   },
-  JAVASCRIPT: {
-    name: "JavaScript",
-    class: "bg-black text-white",
-    icon: JavaScript,
-  }
-}
+  OMNICANAL: {
+    name: "Omnicanal",
+    class: "bg-orange-100 text-orange-800",
+    icon: NodeJS, // Reuse generic icon or import specific if available
+  },
+};
 
 const PROJECTS = [
   {
-    title: "ADMIN SIEM",
-    description: "React/Redux Content Management System (CMS) for a private health organization to facilitate non-technical users to manage and publish web content, reduced developer workload and improved publishing efficiency.",
-    github: "https://github.com/DiegoBoos/ADMIN-SIEM",
-    image: "/src/assets/projects/admin-siem.png",
-    link: "",
-    tags: [TAGS.REACT, TAGS.REDUX, TAGS.JAVASCRIPT],
+    title: "Lynex - Gestión Omnicanal",
+    description:
+      "Plataforma SaaS que centraliza WhatsApp, Email y Webchat en una sola interfaz. Lynex ofrece integraciones con sistemas del cliente como un servicio profesional a la medida. Cada integración requiere análisis técnico, desarrollo, pruebas y mantenimiento continuo.",
+    link: "https://www.lynex.app",
+    image: "/src/assets/projects/admin-siem.png", // Use placeholder or screenshot if available
+    tags: [TAGS.SAAS, TAGS.OMNICANAL, TAGS.BOT],
   },
   {
-    title: "SIRIS POS",
-    description: "Mobile POS system designed and developed using Flutter with real-time geolocation tracking, Firebase integration, and Bluetooth printing to support mobile retail operations.",
-    github: "https://github.com/DiegoBoos/SirisPos",
-    image: "/src/assets/projects/sirispos.png",
-    link: "",
-    tags: [TAGS.FLUTTER, TAGS.FIREBASE],
+    title: "Bots Inteligentes",
+    description:
+      "Chatbots y asistentes virtuales con procesamiento de lenguaje natural (NLP). Integración con sistemas de atención al cliente para automatizar respuestas y mejorar la eficiencia operativa.",
+    link: "https://www.siriscloud.com.co",
+    image: "/src/assets/projects/admin-siem.png", // Placeholder, should be updated if assets available
+    tags: [TAGS.BOT, TAGS.IA, TAGS.PYTHON],
   },
   {
-    title: "IFASORIS",
-    description: "Offline-first mobile app for healthcare professionals using custom sync logic and Flutter Isolates for multithreaded processing.",
-    github: "https://github.com/DiegoBoos/SirisPos",
-    image: "/src/assets/projects/sirispos.png",
-    link: "",
-    tags: [TAGS.FLUTTER, TAGS.SQLITE],
+    title: "Aplicaciones con IA",
+    description:
+      "Desarrollo de aplicaciones inteligentes que integran modelos de IA personalizados para análisis de datos, visión por computador y toma de decisiones automatizada.",
+    link: "https://www.siriscloud.com.co",
+    image: "/src/assets/projects/sirispos.png", // Placeholder
+    tags: [TAGS.IA, TAGS.FLUTTER, TAGS.PYTHON],
   },
   {
-    title: "Course GPT",
-    description: "Designed and implemented the frontend using Angular to deliver an intuitive interface for a generative AI educational assistant, integrated the UI with a NestJS backend and Qdrant vector database, enabling seamless interaction with Ollama-powered language models improving the usability of academic search tools in real time.",
-    github: "https://github.com/DiegoBoos/SirisPos",
-    image: "/src/assets/projects/sirispos.png",
-    link: "",
-    tags: [TAGS.FLUTTER, TAGS.SQLITE],
-  },
-  /* {
-    title: "TikTok Influencer Segmentation",
-    description: "Segmented TikTok influencers using unsupervised learning to uncover hidden audience patterns. Cleaned and preprocessed data, applied K-means clustering, and built visual reports to help marketers target the right influencers with smarter, data-driven strategies.",
-    github: "https://github.com/DiegoBoos/TitkTok-Influencer-Segmentation",
-    image: "/src/assets/projects/tiktok-clustering.png",
-    link: "",
-    tags: [TAGS.PYTHON],
+    title: "Infraestructura Cloud",
+    description:
+      "Arquitectura escalable y segura en la nube. Implementación de soluciones robustas con auto-scaling, backups automáticos y alta disponibilidad.",
+    link: "https://www.siriscloud.com.co",
+    image: "/src/assets/projects/sirispos.png", // Placeholder
+    tags: [TAGS.CLOUD, TAGS.FIREBASE, TAGS.NODEJS],
   },
   {
-    title: "Dog Breed Classification – Stanford Dogs Dataset",
-    description: "Built a deep learning model that recognizes dog breeds from thousands of images in the Stanford Dogs Dataset. With carefully prepared data and preparing it for the model  through techniques like data augmentation (flips, zooms, and rotations). Using an image-recognition expert model, fine-tuned on the data. The project focused on making smart use of an existing technology and preparing the model for real-world use.",
-    github: "https://github.com/DiegoBoos/Dog-Breed-Classification",
-    image: "/src/assets/projects/breed-classification.png",
-    tags: [TAGS.PYTHON],
+    title: "WhatsApp Business API",
+    description:
+      "Automatización de comunicaciones empresariales a través de WhatsApp. Envío masivo de notificaciones, chatbots transaccionales y soporte 24/7.",
+    link: "https://www.siriscloud.com.co",
+    image: "/src/assets/projects/admin-siem.png", // Placeholder
+    tags: [TAGS.BOT, TAGS.NODEJS],
   },
-  {
-    title: "Social Media Sentiment Analysis System",
-    description: "Designed a sentiment analysis pipeline inspired by how modern large language models (LLMs) work. From cleaning and preparing social media posts, handling hashtags, emojis, slang, and casual writing using techniques like tokenization and lemmatization making the model understand the posts, finally with the help of machine learning and deep learning models it classifies the posts into positive, negative, or neutral sentiments.",
-    github: "https://github.com/DiegoBoos/Sentiment-Analysis-on-Social-Media-Posts",
-    image: "/src/assets/projects/sentiment-analysis.png",
-    tags: [TAGS.PYTHON],
-  } */
-]
-
+];
 ---
 
-<div class="flex flex-col gap-y-16">
+<div class="grid gap-8 md:grid-cols-2">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+      <article class="flex flex-col group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+            {description}
+          </p>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+          <ul class="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex items-center gap-1 rounded-full text-xs font-medium px-2.5 py-0.5 ${tag.class}`}
+                >
+                  <tag.icon class="size-3" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+          <footer class="mt-auto">
+            {link && (
+              <LinkButton href={link}>
+                <Link class="size-4" />
+                Saber más
+              </LinkButton>
+            )}
+          </footer>
+        </div>
+      </article>
     ))
   }
 </div>
